@@ -1,16 +1,38 @@
-import { Controller } from '@nestjs/common';
+import { Controller, Get, Post, Body, Param } from '@nestjs/common';
 import { MessagePattern, Payload } from '@nestjs/microservices';
 import { ZentiumApiUserService } from '../services/zentium-api-user.service';
 import { CreateZentiumApiUserDto } from '../domain/dto/create-zentium-api-user.dto';
 import { UpdateZentiumApiUserDto } from '../domain/dto/update-zentium-api-user.dto';
+import { ApiTags, ApiOperation } from '@nestjs/swagger';
 
-@Controller()
+@ApiTags('Zentium Users')
+@Controller('zentium-users')
 export class ZentiumApiUserController {
   constructor(private readonly zentiumApiUserService: ZentiumApiUserService) {}
 
+  // HTTP routes
+  @Get()
+  @ApiOperation({ summary: 'Obtener todos los usuarios' })
+  findAllHttp() {
+    return this.zentiumApiUserService.findAll();
+  }
+
+  @Get(':id')
+  @ApiOperation({ summary: 'Buscar un usuario por ID' })
+  findOneHttp(@Param('id') id: string) {
+    return this.zentiumApiUserService.findOne(id);
+  }
+
+  @Post()
+  @ApiOperation({ summary: 'Crear un usuario (debug)' })
+  createHttp(@Body() createDto: CreateZentiumApiUserDto) {
+    return this.zentiumApiUserService.create(createDto);
+  }
+
+  // Microservice routes
   @MessagePattern('createZentiumApiUser')
-  create(@Payload() createZentiumApiUserDto: CreateZentiumApiUserDto) {
-    return this.zentiumApiUserService.create(createZentiumApiUserDto);
+  create(@Payload() createDto: CreateZentiumApiUserDto) {
+    return this.zentiumApiUserService.create(createDto);
   }
 
   @MessagePattern('findAllZentiumApiUser')
