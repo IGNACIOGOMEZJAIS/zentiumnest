@@ -1,10 +1,10 @@
 import { Module } from '@nestjs/common';
 import { ConfigModule, ConfigService } from '@nestjs/config';
 import { TypeOrmModule } from '@nestjs/typeorm';
-import { ZentiumApiUser } from './domain/entities/zentium-api-user.entity';
-import { ZentiumApiUserController } from './presentation/zentium-api-user.controller';
-import { ZentiumApiUserService } from './services/zentium-api-user.service';
-import { ZentiumApiUserRepository } from './infrastructure/repositories/zentium-api-user.repository';
+import { ZentiumApiUser } from './domain/entities/zentium_api_user.entity';
+import { ZentiumApiUserController } from './presentation/zentium_api_user.controller';
+import { ZentiumApiUserService } from './services/zentium_api_user.service';
+import { ZentiumApiUserRepository } from './infrastructure/repositories/zentium_api_user.repository';
 
 @Module({
   imports: [

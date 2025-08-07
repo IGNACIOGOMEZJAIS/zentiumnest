@@ -17,13 +17,13 @@
         "tsConfigPath": "apps/api-gateway/tsconfig.app.json"
       }
     },
-    "zentium-api-user": {
+    "zentium_api_user": {
       "type": "application",
-      "root": "apps/zentium-api-user",
+      "root": "apps/zentium_api_user",
       "entryFile": "main",
-      "sourceRoot": "apps/zentium-api-user/src",
+      "sourceRoot": "apps/zentium_api_user/src",
       "compilerOptions": {
-        "tsConfigPath": "apps/zentium-api-user/tsconfig.app.json"
+        "tsConfigPath": "apps/zentium_api_user/tsconfig.app.json"
       }
     }
   }

@@ -9,9 +9,9 @@ import {
   Delete,
 } from '@nestjs/common';
 import { MessagePattern, Payload } from '@nestjs/microservices';
-import { ZentiumApiUserService } from '../services/zentium-api-user.service';
-import { CreateZentiumApiUserDto } from '../domain/dto/create-zentium-api-user.dto';
-import { UpdateZentiumApiUserDto } from '../domain/dto/update-zentium-api-user.dto';
+import { ZentiumApiUserService } from '../services/zentium_api_user.service';
+import { CreateZentiumApiUserDto } from '../domain/dto/create_zentium_api_user.dto';
+import { UpdateZentiumApiUserDto } from '../domain/dto/update_zentium_api_user.dto';
 import { ApiTags, ApiOperation } from '@nestjs/swagger';
 
 @ApiTags('Zentium Users')

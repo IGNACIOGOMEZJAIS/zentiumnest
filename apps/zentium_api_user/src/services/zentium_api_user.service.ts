@@ -1,8 +1,8 @@
 import { Injectable } from '@nestjs/common';
-import { CreateZentiumApiUserDto } from '../domain/dto/create-zentium-api-user.dto';
-import { UpdateZentiumApiUserDto } from '../domain/dto/update-zentium-api-user.dto';
-import { ZentiumApiUserRepository } from '../infrastructure/repositories/zentium-api-user.repository';
-import { ZentiumApiUser } from '../domain/entities/zentium-api-user.entity';
+import { CreateZentiumApiUserDto } from '../domain/dto/create_zentium_api_user.dto';
+import { UpdateZentiumApiUserDto } from '../domain/dto/update_zentium_api_user.dto';
+import { ZentiumApiUserRepository } from '../infrastructure/repositories/zentium_api_user.repository';
+import { ZentiumApiUser } from '../domain/entities/zentium_api_user.entity';
 
 @Injectable()
 export class ZentiumApiUserService {

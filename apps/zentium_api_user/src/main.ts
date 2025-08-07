@@ -2,7 +2,7 @@ import { NestFactory } from '@nestjs/core';
 import { MicroserviceOptions, Transport } from '@nestjs/microservices';
 import { ConfigService } from '@nestjs/config';
 import { DocumentBuilder, SwaggerModule } from '@nestjs/swagger';
-import { ZentiumApiUserModule } from './zentium-api-user.module';
+import { ZentiumApiUserModule } from './zentium_api_user.module';
 
 async function bootstrap() {
   const app = await NestFactory.create(ZentiumApiUserModule);

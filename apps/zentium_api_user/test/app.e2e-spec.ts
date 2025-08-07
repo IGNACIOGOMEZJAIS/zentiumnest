@@ -1,7 +1,7 @@
 import { Test, TestingModule } from '@nestjs/testing';
 import { INestApplication } from '@nestjs/common';
 import * as request from 'supertest';
-import { ZentiumApiUserModule } from '../src/zentium-api-user.module';
+import { ZentiumApiUserModule } from '../src/zentium_api_user.module';
 
 describe('ZentiumApiUserController (e2e)', () => {
   let app: INestApplication;

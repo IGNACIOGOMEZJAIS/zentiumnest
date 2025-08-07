@@ -1,6 +1,6 @@
 import { AbstractRepository } from '@app/common';
 import { Injectable, Logger } from '@nestjs/common';
-import { ZentiumApiUser } from '../../domain/entities/zentium-api-user.entity';
+import { ZentiumApiUser } from '../../domain/entities/zentium_api_user.entity';
 import { InjectRepository } from '@nestjs/typeorm';
 import { EntityManager, Repository } from 'typeorm';
 
